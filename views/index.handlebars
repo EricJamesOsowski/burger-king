@@ -1,37 +1,47 @@
-<h1>Cats!</h1>
+<div id="container">
+  <div class="row">
 
-<h2>Cats that are not sleepy!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> cats/cat-block devoured=false}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add A Burger!</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    <div class="col-sm-5">
+      <h1>Welcome to Good Burger, home of The Good Burger!</h1>
+      <div id="waiting">
+        <h2 class="pseudo-header">Burgers Waiting to be Devoured</h2>
+        <ul>
+          {{#each burgers}}
+          {{#unless devoured}}
+          <li class="list-item">
+            {{id}}: {{name}}
+            <button class="change-burger" data-id="{{id}}" data-devoured="{{devoured}}">
+              Devour</button>
+          </li>
+          {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="row"><i class="fas fa-hamburger"></i></div>
+      <h2>Order A Custom Burger!</h2>
+      <form class="create-form">
+        <div class="form-group">
+          <label for="ca">Burger Name:</label>
+          <input type="text" id="ca" name="name">
+        </div>
+        <button type="submit">Add Burger</button>
+      </form>
+    </div>
+    <div class="col-sm-5">
+      <div id="devoured">
+        <h2 class="pseudo-header">Burgers You Have Devoured</h2>
+        <ul>
+          {{#each burgers}}
+          {{#if devoured}}
+          <li class="list-item">
+            {{id}}: {{name}}
+          </li>
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
   </div>
-
-  <div class="form-group">
-    <label for="createBurger">Enter A Burger Name</label><br>
-
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
+</div>

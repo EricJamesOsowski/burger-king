@@ -1,7 +1,8 @@
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: red;
+  color: whitesmoke;
 }
 
 .label {
@@ -16,4 +17,20 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+}
+
+.pseudo-header {
+ text-align: center; 
+}
+
+#container {
+  background-color: whitesmoke;
+  background-size: cover;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.change-burger {
+  color: rgb(49, 49, 49);
 }
