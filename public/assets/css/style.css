@@ -1,8 +1,8 @@
 li {
   padding: 5px;
   margin: 5px;
-  background: red;
-  color: whitesmoke;
+  background: rgb(218, 218, 218);
+  color: black;
 }
 
 .label {
@@ -34,3 +34,17 @@ li {
 .change-burger {
   color: rgb(49, 49, 49);
 }
+
+.jumbotron {
+  background-image: url(https://images.immediate.co.uk/production/volatile/sites/2/2015/08/12812.jpg?quality=90&resize=960%2C408);
+  display: inline-block;
+  margin: 30px;
+  padding: 15px;
+  color: whitesmoke;
+  font: -apple-system-title4;
+  border-radius: 25px;
+}
+.funkyColeMedina{
+  color: black;
+}
+
